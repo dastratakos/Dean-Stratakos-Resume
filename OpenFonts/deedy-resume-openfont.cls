@@ -22,6 +22,7 @@
 \definecolor{primary}{HTML}{2b2b2b} 
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
+\definecolor{temp}{HTML}{66CC00}
 
 % Set main fonts
 \usepackage{fontspec}
@@ -73,12 +74,26 @@ Last Updated on \today
 \newcommand{\descript}[1]{
 \color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
+% One line descriptors command
+\newcommand{\descriptOneLine}[1]{
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1} \normalfont}
+
+% Small descriptors command
+\newcommand{\descriptSmall}[1]{
+\color{subheadings}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{9pt}{11pt}\selectfont {#1 \\} \normalfont}
+
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
 \vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
 {\end{itemize}\vspace{-\topsep}}
+
+% Link command
+\newcommand{\link}[1]{{\textrm{#1}^{\textrm{ \linkSuperscript{\faExternalLink}}}}}
+
+% Link superscript command
+\newcommand{\linkSuperscript}[1]{\fontsize{7pt}{7pt}\selectfont {#1} \normalfont}
 

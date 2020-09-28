@@ -1,0 +1,328 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{Dean Stratakos}{ \urlstyle{same}
+% Computer Science Student-Athlete at Stanford University\\
+\faMapPin $ $ Saratoga, CA |
+\faEnvelope $ $ \href{mailto:dstratak@stanford.edu}{dstratak@stanford.edu} | 
+\faMobile $ $ (408) 797-4107
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Stanford University}
+\descript{BS in Computer Science}
+\location{Sep 2018 - (exp) Jun 2022}
+\location{Stanford, CA}
+\location{GPA: 4.09 / 4.00}
+\sectionsep
+
+\subsection{Saratoga High School}
+\location{Aug 2014 - Jun 2018}
+\location{Saratoga, CA}
+\location{GPA: 4.71 / 4.00}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+% \href{http://dastratakos.github.io}{
+% \begin{tabular}{l l}
+%     \faUser $ $ $ $ Website: & \bf dastratakos.github.io
+% \end{tabular}
+% }
+% \href{https://github.com/dastratakos}{
+% \begin{tabular}{l l}
+%     \faGithub $ $ $ $ Github: & \bf dastratakos
+% \end{tabular}
+% }
+% \href{https://www.linkedin.com/in/dean-stratakos-8b338b149/}{
+% \begin{tabular}{l l}
+%     \faLinkedin $ $ $ $ LinkedIn: & \bf dean-stratakos
+% \end{tabular}
+% }
+\begin{tabular}{l l}
+    \href{http://dastratakos.github.io}{\faUser $ $ $ $ Website:} &
+    \href{http://dastratakos.github.io}{\bf dastratakos.github.io} \\
+    
+    \href{https://github.com/dastratakos}{\faGithub $ $ $ $ Github:} &
+    \href{https://github.com/dastratakos}{\bf dastratakos} \\
+    
+    \href{https://www.linkedin.com/in/dean-stratakos-8b338b149/}{\faLinkedin $ $ $ $ LinkedIn:} &
+    \href{https://www.linkedin.com/in/dean-stratakos-8b338b149/}{\bf dean-stratakos}
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Algorithms and Data Structures \\
+Artificial Intelligence \\
+Computer Organization \& Systems \\
+Machine Learning \\
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+  \item Convolutional Neural Networks
+  \item Deep Learning
+  \item Natural Language Processing
+\end{tightemize}
+Mathematics \\
+\begin{tightemize}
+  \item Linear Algebra
+  \item Multivariable Calculus
+  \item Probability
+\end{tightemize}
+Web Applications
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming Languages}
+\location{Proficient:}
+Python \textbullet{} C++ \textbullet{} C \textbullet{} Java \textbullet{} JavaScript \\
+HTML \textbullet{} CSS \textbullet{} Assembly \textbullet{} \LaTeX \\
+\location{Familiar:}
+Swift \textbullet{} Kotlin
+\sectionsep
+
+\subsection{Tools}
+\location{Proficient:}
+NumPy \textbullet{} scikit-learn \textbullet{} PyTorch \textbullet{} Unix \\
+TensorFlow \textbullet{} Git/GitHub \textbullet{} SQLite \\
+MongoDB (NoSQL) \textbullet{} Android Studio \\
+\location{Familiar:}
+AWS \textbullet{} Microsoft Azure \textbullet{} Pandas
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Clubs and Interests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Clubs and Interests}
+Stanford Christian Students \textbullet{} Surfing \\
+Golf \textbullet{} Volunteering \textbullet{} Saturday Night Live
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Awards
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards}
+% \descript{ITA Scholar Athlete \location{| 2019, 2020}}
+% \descript{Pac-12 All-Academic Honor Roll \location{| 2019, 2020}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     OBJECTIVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Objective}
+% To obtain a summer internship for 2021 in which I can utilize and develop my knowledge in computer science. I am most interested in computer vision, machine learning, and big data.
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+\runsubsection{Apple}
+\descriptOneLine{| Software Engineering Intern,}
+\descriptSmall{Advanced Computation Group}
+\location{Oct 2020 - Present | Portland, OR (remote)}
+\sectionsep
+
+\runsubsection{Apple}
+\descript{| Software Engineering Intern, Panic Triage team }
+\location{Jun - Sep 2020 | Cupertino, CA (remote)}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Improved the performance, scalability, and maintainability of a machine learning clustering algorithm that grouped duplicate kernel panic reports.
+    \item Achieved cluster efficiency \href{https://en.wikipedia.org/wiki/Rand_index#:~:text=(true\%20negatives).-,Adjusted\%20Rand\%20index,specified\%20by\%20a\%20random\%20model.}{$\link{ARIs}$} of 84-89\% for 2 new panic signatures on iOS, macOS Apple Silicon, and macOS Intel.
+    \item Concepts included agglomerative clustering, \href{https://en.wikipedia.org/wiki/Tf\%E2\%80\%93idf#:~:text=In\%20information\%20retrieval\%2C\%20tf\%E2\%80\%93idf,in\%20a\%20collection\%20or\%20corpus.}{$\link{tf-idf}$}, and cloud storage.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{https://quadric.io/}{Quadric$\link{}$}}
+\descript{(startup) | Software Engineering Intern }
+\location{June – Aug 2019 | Burlingame, CA}
+\begin{tightemize}
+    \item Implemented the back end for 6 CNN layers in a C++ based intermediate language on a specialized edge-computing hardware architecture.
+    \item Analyzed compile-time and run-time optimizations for a deep learning network.
+    \item Studied post-training weight quantization to improve inference efficiency.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Technical Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Projects}
+\runsubsection{Photo Sharing Web Application}
+\descript{| CS 142}
+\location{May - Jun 2020 |
+Languages: JavaScript, HTML, CSS |
+\href{https://youtu.be/mFzJm07WL5A}{\faYoutubePlay $ $ YouTube demo \faExternalLink}}
+\begin{tightemize}
+    \item Developed a full stack ReactJS web application with a Node.js web server.
+    \item Utilized a MongoDB database and Material-UI front end components.
+\end{tightemize}
+\sectionsep
+
+% \runsubsection{Wikipedia Question-Answering Project}
+% \descript{| CS 224N}
+% \location{Mar 2020 | Language: Python}
+% \begin{tightemize}
+%     \item Enhanced Google’s ALBERT language model with a custom PyTorch “verifier” that answers fact questions from Wikipedia passage snippets.
+%     \item Achieved 85\% F1 accuracy on \href{https://rajpurkar.github.io/SQuAD-explorer/}{SQuAD 2.0 challenge}.
+% \end{tightemize}
+% \sectionsep
+
+\runsubsection{Optimized Task Scheduling Project}
+\descript{| CS 221}
+\location{Nov - Dec 2019 | Language: Python | \href{https://github.com/dastratakos/CS-221-Final-Project}{\faGithub $ $ GitHub repository \faExternalLink}}
+\begin{tightemize}
+    \item Created a reinforcement learning model using value iteration and Q-learning to optimize revenue and customer satisfaction for service-based businesses.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Pac-Man and Autonomous Car Assignments}
+\descript{| CS 221}
+\location{Nov 2019 | Language: Python}
+\begin{tightemize}
+    \item Implemented pathfinding algorithms to dictate optimal actions in various maps.
+    \item Concepts included minimax, alpha-beta pruning, and Bayesian Networks.
+\end{tightemize}
+\sectionsep
+
+% \runsubsection{Heap Allocator}
+% \descript{| CS 107}
+% \location{Mar 2019 | Language: C}
+% \begin{tightemize}
+%     \item Designed implicit and explicit allocators, balancing utilization and throughput.
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACTIVITIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Activities} 
+\runsubsection{Stanford University Varsity Tennis Team}
+\descript{| Member}
+\location{Sep 2018 - present}
+\begin{tightemize}
+    \item Balance 20+ hours/week of training as a member of a Division I team ranked in the top 10 nationally with a full academic course load.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Student-Athlete Advisory Cmte}
+\descript{| Member, Social Events}
+\location{Sep 2019 - present}
+\begin{tightemize}
+    \item Direct events with 100+ attendees to strengthen student-athlete community
+    \item Maintain open communication between administration and student-athletes
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Abacus at Jin’s Mental Arithmetic Academy}
+\descript{}
+\location{2007 - 2018}
+\begin{tightemize}
+    \item Learned to use the abacus – a Japanese tool for fast mental math calculations. 
+    \item 1st place in Mental Dictations at the international level | 2015, 2016, 2017.
+\end{tightemize}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
